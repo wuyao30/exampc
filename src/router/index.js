@@ -55,7 +55,7 @@ export const constantRoutes = [
     }]
   },
 
-  {
+  /* {
     path: '/example',
     component: Layout,
     redirect: '/example/table',
@@ -155,6 +155,44 @@ export const constantRoutes = [
       {
         path: 'https://panjiachen.github.io/vue-element-admin-site/#/',
         meta: { title: 'External Link', icon: 'link' }
+      }
+    ]
+  },*/
+
+  {
+    path: '/upload',
+    component: Layout,
+    redirect: '/upload',
+    name: 'Upload',
+    meta: {
+      title: 'Upload',
+      icon: 'upload'
+    },
+    children: [
+      {
+        path: 'index',
+        name: 'upload-excel',
+        component: () => import('@/views/upload/upload-excel'),
+        meta: { title: '上传题库', icon: 'form' }
+      }
+    ]
+  },
+
+  {
+    path: '/download',
+    component: Layout,
+    redirect: '/download',
+    name: 'download',
+    meta: {
+      title: 'download',
+      icon: 'download'
+    },
+    children: [
+      {
+        path: 'index',
+        name: 'download-excel',
+        component: () => import('@/views/download/download'),
+        meta: { title: '下载员工成绩', icon: 'form' }
       }
     ]
   },
