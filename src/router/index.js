@@ -196,6 +196,20 @@ export const constantRoutes = [
       }
     ]
   },
+  {
+    path: '/questions',
+    component: Layout,
+    redirect: '/questions',
+    name: 'questions',
+    children: [
+      {
+        path: 'index',
+        name: 'questions-index',
+        component: () => import('@/views/questions/index'),
+        meta: { title: '题库查询', icon: 'form' }
+      }
+    ]
+  },
 
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }

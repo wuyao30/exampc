@@ -22,3 +22,42 @@ export function logout() {
     method: 'post'
   })
 }
+
+export function queryUserScore(data) {
+  return request({
+    url: '/product/getuserresult',
+    method: 'post',
+    data
+  })
+}
+
+export function updateUserScore(data) {
+  return request({
+    url: '/product/updateuserscore',
+    method: 'post',
+    data
+  })
+}
+
+export function queryIndustryNames() {
+  return request({
+    url: '/exam/getindustrynames',
+    method: 'get'
+  })
+}
+
+export function queryQuestions(data) {
+  return request({
+    url: '/exam/getquespage',
+    method: 'post',
+    data
+  })
+}
+
+export function updateQuestion(data) {
+  return request({
+    url: '/exam/updatequetion',
+    method: 'post',
+    data
+  })
+}
